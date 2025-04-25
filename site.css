@@ -177,29 +177,6 @@ footer {
   background-color: var(--orange);
 }
 
-/* Figure and Figcaption Styling */
-figure {
-  text-align: center;
-  margin: 1rem 0;
-}
-
-figcaption {
-  font-size: 0.9em;
-  color: var(--purple);
-  margin-top: 0.5rem;
-}
-
-/* Ensure figure images are styled like others */
-.timeline-entry figure img,
-.hobby-entry figure img,
-.landing-image figure img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 12px;
-  border: 4px solid var(--frame);
-  object-fit: cover;
-}
-
 /* Responsive stacking for figure elements on mobile */
 @media (max-width: 768px) {
   .landing,
@@ -211,10 +188,10 @@ figcaption {
   .timeline-entry img,
   .hobby-entry img,
   .timeline-entry p,
-  .hobby-entry p,
-  .timeline-entry figure,
-  .hobby-entry figure {
-    order: 0 !important;
+  .hobby-entry p {
+  .left-image,
+  .right-image {
+      order: 0 !important;
   }
 }
   
