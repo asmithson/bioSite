@@ -235,4 +235,55 @@ footer {
     order: 0 !important;
   }
 }
-  
+
+/* === Styles for Goal Page === */
+
+/* Setting goals imgs left and text right */
+.goal-entry {
+  display: flex;  
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+
+.goal-entry img {
+  width: 200px;
+  margin-right: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rbga(0, 0, 0, 0.1);
+}
+
+.goal-text {
+  flex: 1;
+  padding-top: 3rem;  
+}
+
+.goal-text p {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+/* Shoutout styling: centering img with text below */
+.shoutout {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.shoutout img {
+  display: block;
+  margin: 0 auto;
+  width: 400px;
+  max-width: 90%;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.shoutout p {
+  margin-top: 1rem;
+  ling-height: 1.6;
+  font-style; italic;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: justify;
+  text-justify: inter-word;
+}
