@@ -165,6 +165,11 @@ section p {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
+/* Optonal, softer background for yellow sections like hobbiles */
+.text-highlight.soft {
+  background-color: #90f5fb;
+}
+
 /* External Link Section */
 .external-link a {
   color: var(--teal);
