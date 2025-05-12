@@ -7,6 +7,7 @@
   --white: #ffffff;
   --yellow: #fff495;
   --purple: #c58af9;
+  --lavender: #caa0ff;
   --frame: #fcc44a;
 }
 
@@ -37,6 +38,41 @@ img {
   padding: 2rem;
   margin-bottom: 2rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* === Navigation Section === */
+nav.contaner {
+  background-color: var(--yellow);
+  border: 2px solid var(--purple);
+  border-radius: 12px;
+  padding: 1rem 1.5red;
+  margin: 2rem auto;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav.container a {
+  color: var(--purple);
+  font-weight: normal;
+  text-decoration: none;
+  margin: 0 1rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease, font-weight 0.3s ease;
+}
+
+nav.container a:hover {
+  background-color: var(--lavender);
+  color: #caa0ff; /* or var(--lavender) if you define it */
+  font-weight: bold;
+}
+
+nav.container a.active {
+  background-color: var(--teal);
+  color: var(--white);
+  font-weight: bold;
+  cursor: default;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 /* Header Section */
@@ -274,7 +310,7 @@ footer {
 /* Goal Page Section */
 .goal-entry {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   margin-bottom: 2rem;
 }
 
@@ -287,7 +323,6 @@ footer {
 
 .goal-text {
   flex: 1;
-  padding-top: 3rem;
 }
 
 .goal-text p {
