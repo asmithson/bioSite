@@ -7,7 +7,7 @@
   --white: #ffffff;
   --yellow: #fff495;
   --purple: #c58af9;
-  --lavender: #caa0ff;
+  --lavender: #c08dff;
   --frame: #fcc44a;
 }
 
@@ -63,7 +63,7 @@ nav.container a {
 
 nav.container a:hover {
   background-color: var(--lavender);
-  color: #caa0ff; /* or var(--lavender) if you define it */
+  color: var(--white); /* or var(--lavender) if you define it */
   font-weight: bold;
 }
 
