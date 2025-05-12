@@ -166,8 +166,18 @@ section p {
 }
 
 /* Optonal, softer background for yellow sections like hobbiles */
-.text-highlight.soft {
+.text-highlight-blue {
   background-color: #90f5fb;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  margin: 0.5rem 0;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.text-highlight-blue:hover {
+  background-color: #f0c2fb;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 /* External Link Section */
