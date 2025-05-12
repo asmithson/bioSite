@@ -41,7 +41,7 @@ img {
 }
 
 /* === Navigation Section === */
-nav.contaner {
+nav.container {
   background-color: var(--yellow);
   border: 2px solid var(--purple);
   border-radius: 12px;
