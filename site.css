@@ -61,12 +61,14 @@ nav.container a {
   transition: background-color 0.3s ease, color 0.3s ease, font-weight 0.3s ease;
 }
 
-nav.container a:hover {
+/* Hover effect for all non-active nav links */
+nav.container a:hover:not(.active) {
   background-color: var(--lavender);
-  color: var(--white); /* or var(--lavender) if you define it */
+  color: var(--white);
   font-weight: bold;
 }
 
+/* Styling for the current active page link */
 nav.container a.active {
   background-color: var(--teal);
   color: var(--white);
