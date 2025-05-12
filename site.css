@@ -210,7 +210,7 @@ section p {
   border-radius: 12px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   margin: 0.5rem 0;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  transition: background-color 0.1s ease, box-shadow 0.1s ease;
   flex: 1 1 600px;
   order: 1;
 }
