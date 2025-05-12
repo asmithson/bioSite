@@ -157,12 +157,12 @@ section p {
   border-radius: 12px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   margin: 0.5rem 0;
-  transition: background-color 0.4s ease, transform 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .text-highlight:hover {
   background-color: #FFE6B3;
-  transform: scale(1.01);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 /* External Link Section */
