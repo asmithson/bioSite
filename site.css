@@ -135,12 +135,18 @@ section p {
 .timeline-entry.dual-image {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
-  gap: 2rem;
+  gap: 1rem;
+}
+
+.timeline-entry.dual-image img {
+  flex: 0 0 250px;
 }
 
 .timeline-entry.dual-image .text-highlight {
-  flex: 1 1 300px;
+  flex: 1 1 400px;
+  min-width: 300px;
 }
 
 /* Highlighted Text Container */
