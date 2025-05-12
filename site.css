@@ -165,7 +165,7 @@ section p {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* Optonal, softer background for yellow sections like hobbiles */
+/* Optonal, softer background for yellow sections like hobbiles(blue can be changed to another color */
 .text-highlight-blue {
   background-color: #90f5fb;
   padding: 1rem 1.5rem;
@@ -173,10 +173,12 @@ section p {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   margin: 0.5rem 0;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  flex: 1 1 600px;
+  order: 1;
 }
 
 .text-highlight-blue:hover {
-  background-color: #f0c2fb;
+  background-color: #bdf8c1;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
