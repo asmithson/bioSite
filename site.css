@@ -135,18 +135,19 @@ section p {
 .timeline-entry.dual-image {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
+  align-items: flex-start;
   gap: 1rem;
 }
 
 .timeline-entry.dual-image img {
-  flex: 0 0 250px;
+  flex: 0 0 260px;
+  max-width: 260px;
 }
 
 .timeline-entry.dual-image .text-highlight {
-  flex: 1 1 400px;
-  min-width: 300px;
+  flex: 1 1 360px;
+  min-width: 200px;
 }
 
 /* Highlighted Text Container */
