@@ -287,3 +287,20 @@ footer {
   text-align: justify;
   text-justify: inter-word;
 }
+
+.text-highlight {
+  background-color: #FFFACD; /* lemon chiffon to keep with the sweet tart theme */
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rbga(0, 0, 0, 0.5);
+  margin: 0.5rem 0;
+}
+
+.text-highlight {
+  transition: background-color 0.4s ease, transform 0.3s ease;
+}
+
+.txt-highlight:hover {
+  background-coolor: #FFE6B3;
+  transform: scale(1.01);
+}
