@@ -9,7 +9,7 @@
   --purple: #c58af9;
   --frame: #fcc44a;
 }
-  
+
 /* Base Styles */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -19,49 +19,51 @@ body {
   background-color: var(--green);
   color: var(--purple);
 }
-  
+
 img {
   max-width: 100%;
   height: auto;
   display: block;
   border-radius: 12px;
   border: 4px solid var(--frame);
+  object-fit: cover;
 }
-  
+
+/* Container Block (Reusable) */
 .container {
   background-color: var(--yellow);
   border: 2px solid var(--purple);
   border-radius: 12px;
   padding: 2rem;
   margin-bottom: 2rem;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-  
-/* Header */
+
+/* Header Section */
 header {
   background: linear-gradient(to right, var(--pink), var(--teal));
   color: var(--white);
   text-align: center;
   padding: 2rem 1rem;
 }
-  
+
 .site-title {
   font-size: 2.5rem;
   margin: 0;
 }
-  
+
 .site-subtitle {
   font-size: 1.5rem;
   margin-top: 0.5rem;
 }
-  
-/* Sections */
+
+/* Main Sections */
 main section {
   padding: 2rem 1rem;
   max-width: 1000px;
   margin: 0 auto;
 }
-  
+
 section h2 {
   color: var(--pink);
   margin-bottom: 1rem;
@@ -71,7 +73,7 @@ section h2 {
 section p {
   margin-bottom: 1rem;
 }
-  
+
 /* Landing Section */
 .landing {
   display: flex;
@@ -80,77 +82,94 @@ section p {
   gap: 2rem;
 }
 
-.landing-image, .intro-text {
+.landing-image,
+.intro-text,
+.portrait {
   flex: 1 1 400px;
 }
-  
-.intro-text, .portrait {
-  flex: 1 1 400px;
-}
-  
-/* Timeline & Hobbies Sections */
+
+/* Timeline & Hobbies Layout */
 .timeline-entry,
 .hobby-entry {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  margin-bottom: 2rem;
   gap: 2rem;
+  margin-bottom: 2rem;
 }
-  
+
+.timeline-entry img,
+.hobby-entry img,
+.timeline-entry .tooltip img,
+.hobby-entry .tooltip img {
+  width: 300px;
+  height: auto;
+}
+
 .timeline-entry.left img,
 .hobby-entry.left img {
   order: 0;
 }
-  
+
 .timeline-entry.right img,
 .hobby-entry.right img {
   order: 1;
 }
-  
-.timeline-entry.left p,
-.hobby-entry.left p {
+
+.timeline-entry.left .text-highlight,
+.hobby-entry.left .text-highlight {
   order: 1;
 }
-  
 
-.timeline-entry.right p,
-.hobby-entry.right p {
+.timeline-entry.right .text-highlight,
+.hobby-entry.right .text-highlight {
   order: 0;
 }
-  
-.timeline-entry img,
-.hobby-entry img {
-  width: 300px;
-  height: auto;
-}
-  
-.timeline-entry p,
-.hobby-entry p {
-  flex: 2 1 300px;
+
+.timeline-entry .text-highlight,
+.hobby-entry .text-highlight {
+  flex: 1 1 600px;
 }
 
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  border-radius: 12px;
-  border: 4px solid var(--frame);
-  object-fit: cover;
+/* Dual Image Timeline Layout */
+.timeline-entry.dual-image {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
 }
-  
+
+.timeline-entry.dual-image .text-highlight {
+  flex: 1 1 300px;
+}
+
+/* Highlighted Text Container */
+.text-highlight {
+  background-color: #FFFACD;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  margin: 0.5rem 0;
+  transition: background-color 0.4s ease, transform 0.3s ease;
+}
+
+.text-highlight:hover {
+  background-color: #FFE6B3;
+  transform: scale(1.01);
+}
+
 /* External Link Section */
 .external-link a {
   color: var(--teal);
   text-decoration: none;
   font-weight: bold;
 }
-  
+
 .external-link a:hover {
   text-decoration: underline;
 }
-  
-/* Footer */
+
+/* Footer Section */
 footer {
   background-color: var(--purple);
   color: var(--white);
@@ -159,7 +178,7 @@ footer {
   margin-top: 2rem;
 }
 
-/* Buttons */
+/* Button Styling */
 .button {
   background-color: var(--pink);
   color: var(--white);
@@ -172,13 +191,12 @@ footer {
   display: inline-block;
   transition: background-color 0.3s ease;
 }
-  
+
 .button:hover {
   background-color: var(--orange);
 }
 
-
-/* Customized Toolip Styling */
+/* Tooltip Styling */
 .tooltip {
   position: relative;
   display: inline-block;
@@ -193,7 +211,7 @@ footer {
   padding: 5px;
   position: absolute;
   z-index: 1;
-  bottom: 125%; /* Position above the image */
+  bottom: 125%;
   left: 50%;
   transform: translateX(-50%);
   opacity: 0;
@@ -212,13 +230,7 @@ footer {
   align-items: center;
 }
 
-.timeline-entry .tooltip img,
-.hobby-entry .tooltip img {
-  width: 300px;
-  height: auto;
-}
-
-/* Responsive stacking for mobile elements */
+/* Responsive Mobile Stacking */
 @media (max-width: 768px) {
   .landing,
   .timeline-entry,
@@ -228,19 +240,16 @@ footer {
 
   .timeline-entry img,
   .hobby-entry img,
-  .timeline-entry p,
-  .hobby-entry p,
+  .text-highlight,
   .left-image,
   .right-image {
     order: 0 !important;
   }
 }
 
-/* === Styles for Goal Page === */
-
-/* Setting goals imgs left and text right */
+/* Goal Page Section */
 .goal-entry {
-  display: flex;  
+  display: flex;
   align-items: flex-start;
   margin-bottom: 2rem;
 }
@@ -249,12 +258,12 @@ footer {
   width: 200px;
   margin-right: 1rem;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rbga(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .goal-text {
   flex: 1;
-  padding-top: 3rem;  
+  padding-top: 3rem;
 }
 
 .goal-text p {
@@ -262,7 +271,7 @@ footer {
   margin-bottom: 1rem;
 }
 
-/* Shoutout styling: centering img with text below */
+/* Shoutout Section */
 .shoutout {
   text-align: center;
   margin-top: 3rem;
@@ -279,30 +288,11 @@ footer {
 
 .shoutout p {
   margin-top: 1rem;
-  ling-height: 1.6;
-  font-style; italic;
+  line-height: 1.6;
+  font-style: italic;
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
   text-align: justify;
   text-justify: inter-word;
-}
-/* Creating background for the intex page text */
-.text-highlight {
-  background-color: #FFFACD; /* lemon chiffon to keep with the sweet tart theme */
-  padding: 1rem 1.5rem;
-  border-radius: 12px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  margin: 0.5rem 0;
-  transition: background-color 0.4s ease, transform 0.3s ease;
-  flex: 1 1 400px;
-}
-
-.text-highlight:hover {
-  background-color: #FFE6B3;
-  transform: scale(1.01);
-}
-
-.timeline-entry .text-highlight {
-  flex: 2 1 300px;
 }
