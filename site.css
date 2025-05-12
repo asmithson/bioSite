@@ -107,6 +107,7 @@ section h2 {
   color: var(--pink);
   margin-bottom: 1rem;
   font-size: 2rem;
+  text-align: center;
 }
 
 section p {
