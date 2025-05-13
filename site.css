@@ -265,6 +265,12 @@ footer {
   align-items: center;
 }
 
+.timeline-entry .tooltip,
+.hobby-entry .tooltip {
+  display: block;
+  flex: 0 0 auto;
+}
+
 .tooltip img {
   display: block;
 }
