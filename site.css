@@ -166,6 +166,19 @@ section p {
   max-width: 200px;
 }
 
+/* Addition to Fix Placement of children: left img, then txt, then right img */
+.timeline-entry.dual-image > .tooltip:first-child {
+  order: o; /* Left image */
+}
+
+.timeline-entry.dual-image > .text-highlight {
+  order: 1; /* Text block */
+}
+
+.timeline-entry.dual-image > .tooltip:last-child {
+  order: 2; /* Right image */
+}
+
 .timeline-entry.dual-image .text-highlight {
   flex: 1 1 360px;
   min-width: 200px;
