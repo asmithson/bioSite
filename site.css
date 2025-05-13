@@ -126,13 +126,13 @@ section p {
 .landing-image,
 .intro-text,
 .portrait,
-.timline-entry .text-highlight,
+.timeline-entry .text-highlight,
 .hobby-entry .text-highlight {
   flex: 1 1 400px;
 }
 
-/* Timeline & Hobbies Order */
-.timeline-entry left img,
+/* === Timeline & Hobbies Order === */
+.timeline-entry.left img,
 .hobby-entry.left img {
   order: 0;
 }
@@ -360,7 +360,7 @@ footer {
 .mb-2 { margin-bottom: 2rem; }
 .mt-2 { margin-top: 2rem; }
 
-/* === Responsive Moble Fix (to preserve order) === */
+/* === Responsive Mobile Fix (to preserve order) === */
 @media (max-width: 768px) {
   .landing,
   .timeline-entry,
