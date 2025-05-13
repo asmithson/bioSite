@@ -269,6 +269,8 @@ footer {
 .hobby-entry .tooltip {
   display: block;
   flex: 0 0 auto;
+  flex-direction: unset;
+  align-items: unset;
 }
 
 .tooltip img {
