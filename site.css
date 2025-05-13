@@ -267,10 +267,11 @@ footer {
 
 .timeline-entry .tooltip,
 .hobby-entry .tooltip {
-  display: block;
-  flex: 0 0 auto;
-  flex-direction: unset;
-  align-items: unset;
+  flex: 0 0 300px;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .tooltip img {
