@@ -162,8 +162,8 @@ section p {
 }
 
 .timeline-entry.dual-image img {
-  flex: 0 0 260px;
-  max-width: 260px;
+  flex: 0 0 400px;
+  max-width: 200px;
 }
 
 .timeline-entry.dual-image .text-highlight {
