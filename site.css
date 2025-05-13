@@ -76,7 +76,7 @@ nav.container a.active {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
-/* Header Section */
+/* === Header Section === */
 header {
   background: linear-gradient(to right, var(--pink), var(--teal));
   color: var(--white);
@@ -94,7 +94,7 @@ header {
   margin-top: 0.5rem;
 }
 
-/* Main Sections */
+/* === Main Section Layout === */
 main section {
   padding: 2rem 1rem;
   max-width: 1000px;
@@ -112,22 +112,9 @@ section p {
   margin-bottom: 1rem;
 }
 
-/* Landing Section */
-.landing {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 2rem;
-}
-
-.landing-image,
-.intro-text,
-.portrait {
-  flex: 1 1 400px;
-}
-
-/* Timeline & Hobbies Layout */
-.timeline-entry,
+/* === Landing Layout === */
+.landing,
+.timline-entry,
 .hobby-entry {
   display: flex;
   flex-wrap: wrap;
@@ -136,15 +123,16 @@ section p {
   margin-bottom: 2rem;
 }
 
-.timeline-entry img,
-.hobby-entry img,
-.timeline-entry .tooltip img,
-.hobby-entry .tooltip img {
-  width: 300px;
-  height: auto;
+.landing-image,
+.intro-text,
+.portrait,
+.timline-entry .text-highlight,
+.hobby-entry .text-highlight {
+  flex: 1 1 400px;
 }
 
-.timeline-entry.left img,
+/* Timeline & Hobbies Order */
+.timeline-entry left img,
 .hobby-entry.left img {
   order: 0;
 }
@@ -164,12 +152,7 @@ section p {
   order: 0;
 }
 
-.timeline-entry .text-highlight,
-.hobby-entry .text-highlight {
-  flex: 1 1 600px;
-}
-
-/* Dual Image Timeline Layout */
+/* === Dual Image Timeline Layout === */
 .timeline-entry.dual-image {
   display: flex;
   flex-wrap: wrap;
@@ -188,14 +171,18 @@ section p {
   min-width: 200px;
 }
 
-/* Highlighted Text Container */
-.text-highlight {
-  background-color: #FFFACD;
+/* === Highlighted Text Blocks === */
+.text-highlight,
+.text-highlight-blue {
   padding: 1rem 1.5rem;
   border-radius: 12px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   margin: 0.5rem 0;
   transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.text-highlight {
+  background-color: #FFFACD;
 }
 
 .text-highlight:hover {
@@ -204,12 +191,7 @@ section p {
 }
 
 .text-highlight-blue {
-  background-color: #90f5fb;
-  padding: 1rem 1.5rem;
-  border-radius: 12px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  margin: 0.5rem 0;
-  transition: background-color 0.1s ease, box-shadow 0.1s ease;
+  background-color: #90f5fb; 
   flex: 1 1 600px;
   order: 1;
 }
@@ -219,45 +201,7 @@ section p {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* External Link Section */
-.external-link a {
-  color: var(--teal);
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.external-link a:hover {
-  text-decoration: underline;
-}
-
-/* Footer Section */
-footer {
-  background-color: var(--purple);
-  color: var(--white);
-  text-align: center;
-  padding: 1rem;
-  margin-top: 2rem;
-}
-
-/* Button Styling */
-.button {
-  background-color: var(--pink);
-  color: var(--white);
-  border: none;
-  border-radius: 12px;
-  padding: 0.75rem 1.5rem;
-  font-weight: bold;
-  cursor: pointer;
-  text-decoration: none;
-  display: inline-block;
-  transition: background-color 0.3s ease;
-}
-
-.button:hover {
-  background-color: var(--orange);
-}
-
-/* Tooltip Styling */
+/* === Tooltip Styling Section === */
 .tooltip {
   position: relative;
   display: inline-flex;
@@ -272,6 +216,24 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.hobby-entry.right .tooltip {
+  order: 1;
+}
+
+.hobby-entry.right .text-highlight,
+.hobby-entry.right .text-highlight-blue {
+  order: 0;
+}
+
+.hobby-entry.left .tooltip {
+  order: 0;
+}
+
+.hobby-entry.left .text-highlight,
+.hobby-entry.left .text-highlight-blue {
+  order: 1;
 }
 
 .tooltip img {
@@ -291,7 +253,7 @@ footer {
   left: 50%;
   transform: translateX(-50%);
   opacity: 0;
-  transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.1s ease-in-out;
   white-space: nowrap;
   pointer-events: none;
   font-size: 0.9rem;
@@ -303,25 +265,45 @@ footer {
   opacity: 1;
 }
 
-
-/* Responsive Mobile Stacking */
-@media (max-width: 768px) {
-  .landing,
-  .timeline-entry,
-  .hobby-entry {
-    flex-direction: column;
-  }
-
-  .timeline-entry img,
-  .hobby-entry img,
-  .text-highlight,
-  .left-image,
-  .right-image {
-    order: 0 !important;
-  }
+/* === Footer Section === */
+footer {
+  background-color: var(--purple);
+  color: var(--white);
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
 }
 
-/* Goal Page Section */
+/* === Button Styling === */
+.button {
+  background-color: var(--pink);
+  color: var(--white);
+  border: none;
+  border-radius: 12px;
+  padding: 0.75rem 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: var(--orange);
+}
+
+/* === External Link Section === */
+.external-link a {
+  color: var(--teal);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.external-link a:hover {
+  text-decoration: underline;
+}
+
+/* === Goal Page Section === */
 .goal-entry {
   display: flex;
   align-items: center;
@@ -343,8 +325,8 @@ footer {
   line-height: 1.6;
   margin-bottom: 1rem;
 }
-
-/* Shoutout Section: place of special position */
+ 
+/* === Shoutout Section === */
 .shoutout {
   text-align: center;
   margin-top: 3rem;
@@ -370,27 +352,27 @@ footer {
   text-justify: inter-word;
 }
 
-/* === Utility Classes: place here to maintain clean code === */
-.text-center {
-  text-align: center;
-}
+/* === Utility Classes === */
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+.mb-1 { margin-bottom: 1rem; }
+.mb-2 { margin-bottom: 2rem; }
+.mt-2 { margin-top: 2rem; }
 
-.text-left {
-  text-align: left;
-}
+/* === Responsive Moble Fix (to preserve order) === */
+@media (max-width: 768px) {
+  .landing,
+  .timeline-entry,
+  .hobby-entry {
+    flex-direction: column;
+  }
 
-.text-right {
-  text-align: right;
-}
-
-.mb-1 {
-  margin-bottom: 1rem;
-}
-
-.mb-2 {
-  margin-bottom: 2rem;
-}
-
-.mt-2 {
-  margin-top: 2rem;
+  .timeline-entry img,
+  .hobby-entry img,
+  .text-highlight,
+  .left-image,
+  .right-image {
+    width: 100%;
+  }
 }
