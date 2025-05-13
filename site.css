@@ -62,14 +62,12 @@ nav.container a {
   transition: background-color 0.3s ease, color 0.3s ease, font-weight 0.3s ease;
 }
 
-/* Hover effect for all non-active nav links */
 nav.container a:hover:not(.active) {
   background-color: var(--lavender);
   color: var(--white);
   font-weight: bold;
 }
 
-/* Styling for the current active page link */
 nav.container a.active {
   background-color: var(--teal);
   color: var(--white);
@@ -205,7 +203,6 @@ section p {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* Optonal, softer background for yellow sections like hobbiles(blue can be changed to another color */
 .text-highlight-blue {
   background-color: #90f5fb;
   padding: 1rem 1.5rem;
@@ -334,7 +331,7 @@ footer {
   margin-bottom: 1rem;
 }
 
-/* Shoutout Section */
+/* Shoutout Section: place of special position */
 .shoutout {
   text-align: center;
   margin-top: 3rem;
@@ -358,4 +355,29 @@ footer {
   margin-right: auto;
   text-align: justify;
   text-justify: inter-word;
+}
+
+/* === Utility Classes: place here to maintain clean code === */
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.mb-1 {
+  margin-bottom: 1rem;
+}
+
+.mb-2 {
+  margin-bottom: 2rem;
+}
+
+.mt-2 {
+  margin-top: 2rem;
 }
