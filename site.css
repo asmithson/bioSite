@@ -367,12 +367,28 @@ footer {
   .hobby-entry {
     flex-direction: column;
   }
-
+  /* Ensure full-width stacking for only mobile */
   .timeline-entry img,
   .hobby-entry img,
   .text-highlight,
   .left-image,
   .right-image {
     width: 100%;
+    max-width: 100%;
+  }
+
+  /* Ensure images are displayed in the correct order */
+  .timeline-entry.left img,
+  .hobby-entry.left img,
+  .timeline-entry.right img,
+  .hobby-entry.right img {
+    order: 0;
+  }
+
+  .timeline-entry.left .text-highlight,
+  .hobby-entry.left .text-highlight,
+  .timeline-entry.right .text-highlight,
+  .hobby-entry.right .text-highlight {
+    order: 1;
   }
 }
