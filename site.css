@@ -154,36 +154,24 @@ section p {
 
 /* === Dual Image Timeline Layout === */
 .timeline-entry.dual-image {
-  display: flex;
-  flex-wrap: wrap;
+  display: flex;  
   justify-content: space-between;
-  align-items: flex-start;
-  gap: 1rem;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
 }
 
 .timeline-entry.dual-image img {
-  flex: 0 0 400px;
-  max-width: 200px;
-}
-
-/* Addition to Fix Placement of children: left img, then txt, then right img */
-.timeline-entry.dual-image .tooltip:nth-of-type(1) {
-  order: o; /* Left image */
+  width: 200px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
 }
 
 .timeline-entry.dual-image .text-highlight {
-  order: 1; /* Centering Text block */
-  flex: 1 1 auto;
+  flex: 1 1 300px;
   min-width: 200px;
-}
-
-.timeline-entry.dual-image .tooltip:lnth-of-type(2) {
-  order: 2; /* Right image */
-}
-
-.timeline-entry.dual-image .text-highlight {
-  flex: 1 1 360px;
-  min-width: 200px;
+  text-align: left;
 }
 
 /* === Highlighted Text Blocks === */
@@ -385,13 +373,30 @@ footer {
   /* Ensure full-width stacking for only mobile */
   .timeline-entry img,
   .hobby-entry img,
-  .text-highlight,
-  .left-image,
-  .right-image {
+  .text-highlight {
     width: 100%;
     max-width: 100%;
   }
 
+  /*Keeping flex-row layout for dual-image section */
+  .timeline-entry.dual-image {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .timeline-entry.dual-image .tooltip {
+    flex: 1 1 40%;
+    max-width: 45%;
+  }
+
+  .timeline-entry.dual-image .text-highlight {
+    flex: 1 1 100%;
+    order: 1;
+    max-width: 100%;
+  }
+  
   /* Ensure images are displayed in the correct order */
   .timeline-entry.left img,
   .hobby-entry.left img,
