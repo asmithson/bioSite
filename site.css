@@ -155,23 +155,20 @@ section p {
 /* === Dual Image Timeline Layout === */
 .timeline-entry.dual-image {
   display: flex;  
+  flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
   gap: 2rem;
-  flex-wrap: wrap;
 }
 
-.timeline-entry.dual-image img {
-  width: 200px;
-  flex-shrink: 0;
-  display: flex;
-  justify-content: center;
+.timeline-entry.dual-image .tooltip {
+  flex: 0 0 auto;
+  max-width: 240px;
 }
 
 .timeline-entry.dual-image .text-highlight {
-  flex: 1 1 300px;
-  min-width: 200px;
-  text-align: left;
+  flex: 1 1 auto;
+  min-width: 300px;
 }
 
 /* === Highlighted Text Blocks === */
