@@ -173,6 +173,8 @@ section p {
 
 .timeline-entry.dual-image .text-highlight {
   order: 1; /* Centering Text block */
+  flex: 1 1 auto;
+  min-width: 200px;
 }
 
 .timeline-entry.dual-image .tooltip:lnth-of-type(2) {
