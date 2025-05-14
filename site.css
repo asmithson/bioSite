@@ -168,7 +168,7 @@ section p {
 
 .timeline-entry.dual-image .text-highlight {
   flex: 1 1 auto;
-  min-width: 300px;
+  min-width: 200px;
 }
 
 /* === Highlighted Text Blocks === */
