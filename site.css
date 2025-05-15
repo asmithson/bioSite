@@ -370,7 +370,7 @@ footer {
   /* Ensure all images and text blocks scale properly  to full-width */
   .timeline-entry img,
   .hobby-entry img,
-  .text-highlight 
+  .text-highlight, 
   .text-highlight-blue {
     width: 100%;
     max-width: 100%;
