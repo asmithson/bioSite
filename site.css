@@ -378,6 +378,14 @@ footer {
     height: auto;
   }
 
+  .timeline-entry .tooltip,
+  .hobby-entry .tooltip {
+    flex: 1 1 100%;
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;    
+  }
+
   /* Ensure intro text scales properly and doesn't overflow */
   .intro-text {
     width: 100%;
