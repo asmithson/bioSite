@@ -361,7 +361,7 @@ footer {
 .mt-2 { margin-top: 2rem; }
 
 /* === Responsive Mobile Fix (to preserve order) === */
-@media (max-width: 768px) {
+@media (min-width: 769px) {
   .landing,
   .timeline-entry,
   .hobby-entry {
@@ -449,5 +449,28 @@ footer {
     margin-top: 0.5rem;
     margin-bottom: o.5rem;
     padding: 1rem;
+  }
+
+  /* Restoring the alternate layout for timeline entries */
+  .timeline-entry.left img,
+  .hobby-entry.left img {
+    order: 0;
+  }
+
+  .timeline-entry.left .text-highlight,
+  .hobby-entry.left .text-highlight 
+  timeline-entry.left .text-highlight-blue {
+    order: 1;
+  }
+
+  .timeline-entry.right img,
+  .hobby-entry.right img {
+    order: 1;
+  }
+
+  .timeline-entry.right .text-highlight,
+  .hobby-entry.right .text-highlight,
+  .timeline-entry.right .text-highlight-blue {
+    order: 0;
   }
 }
