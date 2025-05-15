@@ -367,15 +367,37 @@ footer {
   .hobby-entry {
     flex-direction: column;
   }
-  /* Ensure full-width stacking for only mobile */
+  /* Ensure all images and text blocks scale properly  to full-width */
   .timeline-entry img,
   .hobby-entry img,
-  .text-highlight {
+  .text-highlight 
+  .text-highlight-blue {
     width: 100%;
     max-width: 100%;
+    box-sizing: border-box;
+    height: auto;
   }
 
-  /*Keeping flex-row layout for dual-image section */
+  /* Ensure intro text scales properly and doesn't overflow */
+  .intro-text {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+  }
+
+  /* Spacing under landing image */
+  .landing-image {
+    margin-bottom: 1rem;
+  } 
+
+  /* Center external link section title */
+  .external-link h2 {
+    text-align: center;
+    padding: 0 1rem;
+  }
+
+  /* Dual-image timeline layout fix */
   .timeline-entry.dual-image {
     flex-direction: row;
     flex-wrap: wrap;
@@ -407,5 +429,16 @@ footer {
   .timeline-entry.right .text-highlight,
   .hobby-entry.right .text-highlight {
     order: 1;
+  }
+
+  /* Stacking and centering hobby entries */
+  .hobby-entry {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hobby-entry .text-highlight {
+    text-align: left;
   }
 }
