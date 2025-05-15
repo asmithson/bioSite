@@ -441,4 +441,21 @@ footer {
   .hobby-entry .text-highlight {
     text-align: left;
   }
+
+  /* Attempting to fix mobile layout spacing for blue blocks */
+  .text-highlight-blue {
+    flex: 1 1 auto;
+    min-height: auto;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    height: auto;
+  }
+
+  .text-highlight,
+  .text-highlight-blue {
+    margin-top: 0.5rem;
+    margin-bottom: o.5rem;
+    padding: 1rem;
+  }
 }
