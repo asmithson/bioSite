@@ -361,13 +361,24 @@ footer {
 .mt-2 { margin-top: 2rem; }
 
 /* === Responsive Mobile Fix (to preserve order) === */
-@media (min-width: 769px) {
+@media (max-width: 768px) {
+  /* stacking layout for major sections */
   .landing,
   .timeline-entry,
   .hobby-entry {
     flex-direction: column;
   }
-  /* Ensure all images and text blocks scale properly  to full-width */
+
+  /* tooltip container with flexibility */
+  .timeline-entry .tooltip,
+  .hobby-entry .tooltip {
+    flex: 1 1 auto;
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* ensure all images and text blocks scale properly  to full-width */
   .timeline-entry img,
   .hobby-entry img,
   .text-highlight, 
@@ -378,66 +389,22 @@ footer {
     height: auto;
   }
 
-  .timeline-entry .tooltip,
-  .hobby-entry .tooltip {
-    flex: 1 1 100%;
-    max-width: 100%;
-    width: 100%;
-    box-sizing: border-box;    
-  }
-
-  /* Ensure intro text scales properly and doesn't overflow */
-  .intro-text {
+  /* spacing and alignment fix for landing section */
+  .intro-text,
+  .landing-image {
     width: 100%;
     max-width: 100%;
     box-sizing: border-box;
     margin-bottom: 1rem;
   }
 
-  /* Spacing under landing image */
-  .landing-image {
-    margin-bottom: 1rem;
-  } 
-
-  /* Center external link section title */
+  /* center external link section title */
   .external-link h2 {
     text-align: center;
     padding: 0 1rem;
-  }
-
-  /* Dual-image timeline layout fix */
-  .timeline-entry.dual-image {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-  }
-
-  .timeline-entry.dual-image .tooltip {
-    flex: 1 1 40%;
-    max-width: 45%;
-  }
-
-  .timeline-entry.dual-image .text-highlight {
-    flex: 1 1 100%;
-    order: 1;
-    max-width: 100%;
-  }
-  
-  /* Deleted stacking order to test fix */
-
-  /* Stacking and centering hobby entries */
-  .hobby-entry {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .hobby-entry .text-highlight {
-    text-align: left;
-  }
-
-  /* Attempting to fix mobile layout spacing for text blocks */
+   }
+ 
+  /* text block spacing and layout fix */
   .text-highlight,
   .text-highlight-blue {
     flex: 1 1 auto;
@@ -449,28 +416,5 @@ footer {
     margin-top: 0.5rem;
     margin-bottom: o.5rem;
     padding: 1rem;
-  }
-
-  /* Restoring the alternate layout for timeline entries */
-  .timeline-entry.left img,
-  .hobby-entry.left img {
-    order: 0;
-  }
-
-  .timeline-entry.left .text-highlight,
-  .hobby-entry.left .text-highlight 
-  timeline-entry.left .text-highlight-blue {
-    order: 1;
-  }
-
-  .timeline-entry.right img,
-  .hobby-entry.right img {
-    order: 1;
-  }
-
-  .timeline-entry.right .text-highlight,
-  .hobby-entry.right .text-highlight,
-  .timeline-entry.right .text-highlight-blue {
-    order: 0;
-  }
+  }  
 }
